@@ -1,0 +1,101 @@
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.img-center {
+    margin: 0 auto;
+}
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+.mashfoot, cover-container{
+   position: fixed;
+   bottom: 0;
+   text-align: center;
+    width: 100%;
+}
+
+.moveleft{
+   position: absolute;
+   right: 0px;
+   padding: 10px;
+   width: 300px;
+    
+}
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+.box  {
+    width: 300px;
+    padding: 5px;
+    border: 5px solid navy;
+    margin: 5px;
+}
+
+.right  {
+    left: 65%;
+}
+
+.view-right {
+    margin-top: 5%;
+
+}
+.pkm {
+    border-style: solid;
+    border-color: #0c7cd5;
+    background-color: #fcfcfc;
+    margin-bottom: 20px;
+    padding: 20px 10px 0 10px;
+    border-radius: 10px;
+    border-width: 2px;
+}
+
+.margin {
+    padding: 1px;
+    margin: 1px;
+}
+
+.margin-auto {
+    margin: 0 auto;
+    padding-top:100px;
+}
+
+.padding-1 {
+    padding-right:50px;
+}
+
+.padding-2 {
+    padding-top:12px;
+    padding-left:5px;
+}
+
+.et-search-form input { width: 280px; padding: 10px 20px; background-color: #F8F8F8; border: none; color: #333;}
+
+.et-search-form { box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  top: 46px; right: 0; display: none; position: absolute; z-index: 1000; background: #fff; border-top: 3px solid #7EBEC5; padding: 20px;}
+
+.et_header_style_centered .et-search-form { top: 20px; }
+
+.et_header_style_centered .et-fixed-header .et-search-form { top: 21px; }
+
+.et-fixed-header .et-search-form { top: 26px; }
+
+.et_nav_text_color_light .et-search-form input { background-color: rgba(255,255,255,0.1); color: rgba(255,255,255,0.9); }
+
+.et_color_scheme_green .et-search-form, .et_color_scheme_green .nav li ul, .et_color_scheme_green .et_mobile_menu, .et_color_scheme_green .footer-widget li:before, .et_color_scheme_green .et_pb_pricing li:before { border-color: #7cc68d !important; }
+
+.et_color_scheme_pink .et-search-form, .et_color_scheme_pink .nav li ul, .et_color_scheme_pink .et_mobile_menu, .et_color_scheme_pink .footer-widget li:before, .et_color_scheme_pink .et_pb_pricing li:before { border-color: #c37cc6 !important; }
+
+.et_color_scheme_red .et-search-form, .et_color_scheme_red .nav li ul, .et_color_scheme_red .et_mobile_menu, .et_color_scheme_red .footer-widget li:before, .et_color_scheme_red .et_pb_pricing li:before { border-color: #cd5c5c; }
+
+.et_color_scheme_orange .et-search-form, .et_color_scheme_orange .nav li ul, .et_color_scheme_orange .et_mobile_menu, .et_color_scheme_orange .footer-widget li:before, .et_color_scheme_orange .et_pb_pricing li:before { border-color: #edb059; }
+
+.et_vertical_nav #main-header .nav li ul, .et_vertical_nav #main-header .et-search-form { border-top: none; border-left-width: 3px; border-left-style: solid; }
+
