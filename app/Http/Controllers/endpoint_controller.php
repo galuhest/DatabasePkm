@@ -123,6 +123,7 @@ class ResponseController extends Controller
         $input = Input::get('s');
         $results = PkmModel::where('title', 'like', '%'.$input.'%')
             ->orWhere('leader','like','%'.$input.'%')
+            ->orWhere('definition','like','%'.$input."%")
             ->paginate(10);
         $category = 'Result';
         $id = -1;

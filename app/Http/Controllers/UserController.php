@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\facultyModel;
 use App\PkmModel;
 use App\userModel;
 use Illuminate\Http\Request;
@@ -33,8 +34,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
-        return view('newUser',[]);
+        $faculties = facultyModel::all();
+        return view('newUser',['faculties'=>$faculties]);
     }
 
     /**
@@ -51,6 +52,7 @@ class UserController extends Controller
         $userDb = SSO::getUser();
         $validator = Validator::make(Input::all(), [
             'phone' => 'required',
+            'faculty' => 'required'
         ]);
 
         if ($validator->fails()) {
@@ -62,6 +64,7 @@ class UserController extends Controller
         $user->role = 0;
         $user->phone_num = Input::get('phone');
         $user->npm = $userDb->npm;
+        $user->faculty = Input::get('faculty');
         $user->save();
         return redirect('/');
     }

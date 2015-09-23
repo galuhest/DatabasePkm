@@ -48,7 +48,8 @@
             <div class="col-md-5">
                 <h3>{{$result->title}}</h3>
                 <p>Ketua : {{$result->leader}}</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+                <h6>Deskripsi :</h6>
+                <p>{{$result->definition}}</p>
                 <a class="btn btn-primary" href="/pkm/view/{{$result->id}}">View PKM <span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
         </div>

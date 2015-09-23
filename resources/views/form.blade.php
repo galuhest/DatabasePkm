@@ -12,7 +12,7 @@
             <h3> Form Pengisian </h3>
 
         </div>
-    <form action="{{url('pkm/add')}}" method="post" enctype="multipart/form-data">
+    <form action="{{url('pkm/add')}}" method="post" enctype="multipart/form-data" id="new_pkm">
         
   <div class="form-group">
       
@@ -79,13 +79,26 @@
                 {{ $errors->first('status') }}
             </div>
         @endif
-</div> 
+</div>
+
+        <div class="form-group">
+        <label>Deskripsi singkat :</label><br>
+            <textarea cols="100" rows="5" name="definition" form="new_pkm">
+            </textarea>
+            @if ($errors->has('definition'))
+                <div class="alert alert-danger" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span>
+                    {{ $errors->first('definition') }}
+                </div>
+            @endif
+        </div>
            
   <div class="form-group">
     <label for="exampleInputFile">File input</label>
     <input type="file" id="exampleInputFile" name="file" value="{{Input::old('file')}}">
     <p class="help-block">Contoh: judulpkm.pdf</p>
-      <p class="help-block"> Harus dalam format .pdf</p>
+      <p class="help-block"> File harus dalam format .pdf</p>
   </div>
 
            

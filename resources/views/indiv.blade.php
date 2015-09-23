@@ -33,9 +33,9 @@
                     <li>Tahun       : {{$pkm->year}}</li>
                     <li>Status      : {{$pkm->status}}</li>
                     <li>Download File <br></li>
-
                 </ul>
-
+                <h3>Deskripsi :</h3>
+                <p>{{$pkm->definition}}</p>
                 <a class="btn btn-default" href="{{asset('upload/pkm').''.$pkm->id.'.pdf'}}">Download <span class=" glyphicon glyphicon-download-alt"></span></a>
 
             @if($userDb->id == $pkm->uploader || $userDb->role == 2)

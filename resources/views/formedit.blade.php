@@ -79,6 +79,19 @@
             </div>
 
             <div class="form-group">
+                <label>Deskripsi singkat :</label><br>
+            <textarea cols="100" rows="5" name="definition" form="new_pkm">
+            </textarea>
+                @if ($errors->has('definition'))
+                    <div class="alert alert-danger" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error:</span>
+                        {{ $errors->first('definition') }}
+                    </div>
+                @endif
+            </div>
+
+            <div class="form-group">
                 <label for="exampleInputFile">File input</label>
                 <input type="file" id="exampleInputFile" value="{{asset('upload/pkm').''.$pkm->id.'.pdf'}}" name="file">
                 <p class="help-block">Contoh: judulpkm.pdf</p>

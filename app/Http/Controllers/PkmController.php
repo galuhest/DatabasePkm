@@ -102,7 +102,7 @@ class PkmController extends Controller
             'status' => 'required',
             'category' => 'required',
             'file' => 'required|mimes:pdf',
-
+            'definition' => 'required'
         ]);
 
         if ($validator->fails()) {
@@ -116,7 +116,9 @@ class PkmController extends Controller
         $pkm->year = Input::get('year');
         $pkm->status = Input::get('status');
         $pkm->category = Input::get('category');
+        $pkm->definition = Input::get('definition');
         $userDb = userModel::where('username', Session::get('user')->username)->first();
+        if($userDb->role == 0)
         $userDb->role = 1;
         $userDb->save();
         $pkm->uploader = $userDb->id;
@@ -198,7 +200,7 @@ class PkmController extends Controller
             'status' => 'required',
             'category' => 'required',
             'file' => 'required|mimes:pdf',
-
+            'definition' => 'required'
         ]);
 
         if ($validator->fails()) {
@@ -212,6 +214,7 @@ class PkmController extends Controller
         $pkm->year = Input::get('year');
         $pkm->status = Input::get('status');
         $pkm->category = Input::get('category');
+        $pkm->definition = Input::get('definition');
         $pkm->save();
         $file = Request::file('file');
 
@@ -256,6 +259,7 @@ class PkmController extends Controller
         $input = Input::get('s');
         $results = PkmModel::where('title', 'like', '%'.$input.'%')
             ->orWhere('leader','like','%'.$input.'%')
+            ->orWhere('definition','like','%'.$input."%")
             ->paginate(10);
         $category = 'Result';
         $id = -1;
