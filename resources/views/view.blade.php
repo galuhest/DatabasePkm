@@ -49,7 +49,7 @@
                 <h3>{{$result->title}}</h3>
                 <p>Ketua : {{$result->leader}}</p>
                 <h6>Deskripsi :</h6>
-                <p>{{$result->definition}}</p>
+                <p>{{$result->description}}</p>
                 <a class="btn btn-primary" href="/pkm/view/{{$result->id}}">View PKM <span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
         </div>

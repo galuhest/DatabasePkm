@@ -80,13 +80,13 @@
 
             <div class="form-group">
                 <label>Deskripsi singkat :</label><br>
-            <textarea cols="100" rows="5" name="definition" form="new_pkm">
+            <textarea cols="100" rows="5" name="description" form="new_pkm">
             </textarea>
-                @if ($errors->has('definition'))
+                @if ($errors->has('description'))
                     <div class="alert alert-danger" role="alert">
                         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                         <span class="sr-only">Error:</span>
-                        {{ $errors->first('definition') }}
+                        {{ $errors->first('description') }}
                     </div>
                 @endif
             </div>

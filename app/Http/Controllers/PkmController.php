@@ -102,7 +102,7 @@ class PkmController extends Controller
             'status' => 'required',
             'category' => 'required',
             'file' => 'required|mimes:pdf',
-            'definition' => 'required'
+            'description' => 'required'
         ]);
 
         if ($validator->fails()) {
@@ -116,7 +116,7 @@ class PkmController extends Controller
         $pkm->year = Input::get('year');
         $pkm->status = Input::get('status');
         $pkm->category = Input::get('category');
-        $pkm->definition = Input::get('definition');
+        $pkm->description = Input::get('description');
         $userDb = userModel::where('username', Session::get('user')->username)->first();
         if($userDb->role == 0)
         $userDb->role = 1;
@@ -200,7 +200,7 @@ class PkmController extends Controller
             'status' => 'required',
             'category' => 'required',
             'file' => 'required|mimes:pdf',
-            'definition' => 'required'
+            'description' => 'required'
         ]);
 
         if ($validator->fails()) {
@@ -214,7 +214,7 @@ class PkmController extends Controller
         $pkm->year = Input::get('year');
         $pkm->status = Input::get('status');
         $pkm->category = Input::get('category');
-        $pkm->definition = Input::get('definition');
+        $pkm->description = Input::get('description');
         $pkm->save();
         $file = Request::file('file');
 
@@ -259,7 +259,7 @@ class PkmController extends Controller
         $input = Input::get('s');
         $results = PkmModel::where('title', 'like', '%'.$input.'%')
             ->orWhere('leader','like','%'.$input.'%')
-            ->orWhere('definition','like','%'.$input."%")
+            ->orWhere('description','like','%'.$input."%")
             ->paginate(10);
         $category = 'Result';
         $id = -1;
@@ -286,6 +286,7 @@ class PkmController extends Controller
                 ->orWhere('leader','like','%'.$input.'%')
                 ->orderBy($sortby,$point)
                 ->paginate(10);
+            $id = -1;
             return view('view',['results'=>$results,'category'=>$category,'id'=>$id,'input'=>$input]);
         }
         return view('view',['results'=>$results,'category'=>$category,'id'=>$id]);

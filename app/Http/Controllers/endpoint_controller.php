@@ -123,7 +123,7 @@ class ResponseController extends Controller
         $input = Input::get('s');
         $results = PkmModel::where('title', 'like', '%'.$input.'%')
             ->orWhere('leader','like','%'.$input.'%')
-            ->orWhere('definition','like','%'.$input."%")
+            ->orWhere('description','like','%'.$input."%")
             ->paginate(10);
         $category = 'Result';
         $id = -1;
@@ -135,7 +135,7 @@ class ResponseController extends Controller
         $point = Input::get('point');
         $id = Input::get('id');
         $category = Input::get('category');
-        if($id <> 0)    {
+        if($id > 0)    {
             $results = PkmModel::where('category','=',$id)
                 ->orderBy($sortby,$point)
                 ->paginate(10);
@@ -145,8 +145,13 @@ class ResponseController extends Controller
                 ->paginate(10);
         }
         else    {
-            $results = PkmModel::orderBy($sortby,$point)
+            $input = Input::get('query');
+            $results = PkmModel::where('title', 'like', '%'.$input.'%')
+                ->orWhere('leader','like','%'.$input.'%')
+                ->orderBy($sortby,$point)
                 ->paginate(10);
+            $id = -1;
+            return view('view',['results'=>$results,'category'=>$category,'id'=>$id,'input'=>$input]);
         }
         return response()->json(['results'=>$results,'category'=>$category,'id'=>$id]);
     }
