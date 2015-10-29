@@ -39,11 +39,11 @@ footer {
     border: 5px solid navy;
     margin: 5px;
 }
-
-.right  {
-    left: 65%;
+@media (min-width: 768px) {
+    .right {
+        left: 65%;
+    }
 }
-
 .view-right {
     margin-top: 5%;
 
@@ -79,6 +79,15 @@ footer {
 
 .responsive-area    {
     width : 100%;
+}
+
+.btn-responsive {
+    height : 100%;
+    width : 100%;
+}
+
+.btn-pad    {
+    padding: 5px;
 }
 
 .et-search-form input { width: 280px; padding: 10px 20px; background-color: #F8F8F8; border: none; color: #333;}

@@ -36,50 +36,14 @@
                 </ul>
                 <h3>Deskripsi :</h3>
                 <p>{{$pkm->description}}</p>
-                <a class="btn btn-default" href="{{asset('upload/pkm').''.$pkm->id.'.pdf'}}">Download <span class=" glyphicon glyphicon-download-alt"></span></a>
+                <a class="btn btn-default btn-pad" href="{{asset('upload/pkm').''.$pkm->id.'.pdf'}}">Download <span class=" glyphicon glyphicon-download-alt"></span></a>
 
             @if($userDb->id == $pkm->uploader || $userDb->role == 2)
-                    <a class="btn btn-warning" href="/pkm/edit/{{$pkm->id}}">Edit<span class="glyphicon glyphicon-pencil"></span></a>
-                    <a class="btn btn-danger" href="/pkm/delete/{{$pkm->id}}">Delete<span class="glyphicon glyphicon-pencil"></span></a>
+                    <a class="btn btn-warning btn-pad" href="/pkm/edit/{{$pkm->id}}">Edit<span class="glyphicon glyphicon-pencil"></span></a>
+                    <a class="btn btn-danger btn-pad" href="/pkm/delete/{{$pkm->id}}">Delete<span class="glyphicon glyphicon-pencil"></span></a>
             @endif
             </div>
         </div>
-        <!-- /.row -->
-
-        <!-- Related Projects Row -->
-        <div class="row">
-
-            <div class="col-lg-12">
-                <h3 class="page-header">Related Projects</h3>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
-
-        </div>
-        <!-- /.row -->
-        <hr>
         <!-- Footer -->
         @endsection
 

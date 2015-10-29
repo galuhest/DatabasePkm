@@ -8,7 +8,7 @@
 
 @section('content')
     <div class="col-lg-6">
-        <h4>PKM 2012-2013-2014-2015</h4>
+        <h4>PKM <br>2012-2013-2014-2015</h4>
     <canvas id="myChart" width="400" height="400" >
     </canvas>
     </div>

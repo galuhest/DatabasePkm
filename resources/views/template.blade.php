@@ -62,7 +62,7 @@
                     </form>
                 </li>
                 <li class="right">
-                    <a class="btn btn-sm btn-danger" href="/auth/logout">Log out</a>
+                    <a class="btn btn-sm btn-danger btn-responsive" href="/auth/logout">Log out</a>
                 </li>
             </ul>
         </div>
@@ -85,10 +85,7 @@
 
 </div>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="{{asset('js/bootstrap.js')}}" type="text/javascript"></script>
-<script src="{{asset('js/jquery.js')}}"></script>
 <script src="{{asset('js/jquery.min.js')}}"></script>
-
 <script src="{{asset('js/bootstrap.min.js')}}" type="text/javascript"></script>
 <!-- Footer -->
 @show
